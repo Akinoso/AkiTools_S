@@ -27,7 +27,17 @@ SlashCmdList['AKIS'] = function(msg)
 		
 	elseif command == 'adgt' then
 		AkiS:AnnounceTargetDungeons(rest)
-	
+
+	elseif command == 'showit' then
+		print('私聊自动邀请密码：')
+		for k, v in pairs(DB.inviteText) do
+			print(k..'：'..v)
+		end
+
+	elseif command == 'addit' then
+		table.insert(DB.inviteText, rest)
+		print('新增私聊自动邀请密码：'..rest)
+
 	elseif command == 'cfg' then
 		InterfaceOptionsFrame_OpenToCategory('AkiTools_S')
 		InterfaceOptionsFrame_OpenToCategory('AkiTools_S')
