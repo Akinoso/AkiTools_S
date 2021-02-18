@@ -38,6 +38,10 @@ SlashCmdList['AKIS'] = function(msg)
 		table.insert(DB.inviteText, rest)
 		print('新增私聊自动邀请密码：'..rest)
 
+	elseif command == 'wr' then
+		LoadAddOn('Blizzard_WeeklyRewards')
+		WeeklyRewardsFrame:Show()
+
 	elseif command == 'cfg' then
 		InterfaceOptionsFrame_OpenToCategory('AkiTools_S')
 		InterfaceOptionsFrame_OpenToCategory('AkiTools_S')
